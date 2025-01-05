@@ -5,7 +5,15 @@ import { PaperProvider, Button, TextInput } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function App() {
-  const [text, setText] = useState('');
+  const [lkr, setLkr] = useState('');
+  const [usd, setUsd] = useState('');
+
+  const converttousd = () => {
+    const rate = 0.003; // Exchange rate: 1 LKR = 0.003 USD
+    const converte = (parseFloat(lkr) * rate).toFixed(2); // Conversion logic
+    setUsd(converte); // Update USD state
+  };
+
   return (
     <PaperProvider>
       <SafeAreaProvider>
