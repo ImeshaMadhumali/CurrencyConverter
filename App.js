@@ -33,6 +33,12 @@ export default function App() {
           Convert To USD
         </Button>
         
+          {usd && (
+            <View style={styles.resultBox}>
+              <Text style={styles.resultText}>Converted Amount:</Text>
+              <Text style={styles.usdText}>{`$${usd}`}</Text>
+            </View>
+          )}
       </View>
       </SafeAreaProvider>
     </PaperProvider>
