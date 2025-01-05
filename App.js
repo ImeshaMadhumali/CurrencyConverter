@@ -29,8 +29,8 @@ export default function App() {
             keyboardType="numeric"
             style={styles.input}
         />
-        <Button mode="contained" onPress={() => console.log('Pressed')}>
-          Convert
+          <Button mode="contained" onPress={converttousd}>
+          Convert To USD
         </Button>
         
       </View>
