@@ -22,8 +22,12 @@ export default function App() {
         <Text>Welcome to Convert Currency!</Text>
         <StatusBar style="auto" />
         <TextInput
-          value={text}
-          onChangeText={text => setText(text)}
+            mode='flat'
+            label="Enter LKR Amount"
+            value={lkr}
+            onChangeText={setLkr}
+            keyboardType="numeric"
+            style={styles.input}
         />
         <Button mode="contained" onPress={() => console.log('Pressed')}>
           Convert
