@@ -17,29 +17,29 @@ export default function App() {
   return (
     <PaperProvider>
       <SafeAreaProvider>
-      <View style={styles.container}>
-        <Text variant="titleLarge" style={styles.title}>Curency Converter</Text>
-        <Text>Welcome to Convert Currency!</Text>
-        <StatusBar style="auto" />
-        <TextInput
+        <View style={styles.container}>
+          <Text variant="titleLarge" style={styles.title}>Curency Converter</Text>
+          <Text>Welcome to Convert Currency!</Text>
+          <StatusBar style="auto" />
+          <TextInput
             mode='flat'
             label="Enter LKR Amount"
             value={lkr}
             onChangeText={setLkr}
             keyboardType="numeric"
             style={styles.input}
-        />
+          />
           <Button mode="contained" onPress={converttousd}>
           Convert To USD
-        </Button>
-        
+          </Button>
+
           {usd && (
             <View style={styles.resultBox}>
               <Text style={styles.resultText}>Converted Amount:</Text>
               <Text style={styles.usdText}>{`$${usd}`}</Text>
             </View>
           )}
-      </View>
+        </View>
       </SafeAreaProvider>
     </PaperProvider>
 
@@ -49,13 +49,38 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ADD8E6',
     alignItems: 'center',
     justifyContent: 'center',
   },
   title: {
     fontFamily: 'Arial',
+    fontSize: 25,
+    fontWeight: 'bold',
     color: 'green',
     justifyContent: 'center',
   },
+  input: {
+    width: '80%',
+    marginTop: 20,
+    marginBottom: 20,
+    backgroundColor: 'gray'
+  },
+  resultBox: {
+    marginTop: 20,
+    padding: 10,
+    backgroundColor: '#FFFFE0',
+    borderRadius: 5,
+    alignItems: 'center',
+    width: '60%',
+  },
+  resultText: {
+    fontSize: 16,
+    color: '#333',
+  },
+  usdText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#000',
+  }
 });
