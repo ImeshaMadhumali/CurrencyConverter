@@ -5,12 +5,12 @@ import { PaperProvider } from 'react-native-paper';
 export default function App() {
   return (
     <PaperProvider>
-  <View style={styles.container}>
-      <Text>Welcome to Currency Converter!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <View style={styles.container}>
+        <Text>Welcome to Currency Converter!</Text>
+        <StatusBar style="auto" />
+      </View>
     </PaperProvider>
-  
+
   );
 }
 
